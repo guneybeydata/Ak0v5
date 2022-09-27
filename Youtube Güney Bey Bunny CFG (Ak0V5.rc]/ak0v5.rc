@@ -1,0 +1,44 @@
+alias fpson "exec elit1.cfg"
+alias fpsoff "exec elit2.cfg"
+
+alias +str "+ak0strafe; fpson"
+alias -str "fpsoff; -ak0strafe"
+
+alias "voicechat" "voice1"
+alias "voice1" "+voicerecord;alias voicechat voice2"
+alias "voice2" "-voicerecord;alias voicechat voice1"
+bind "v" "voicechat"
+
+alias +ashack "ak0speed 0"
+alias -ashack "ak0speed 1"
+alias ashackon "+ashack; bind z ashackoff"
+alias ashackoff "-ashack; bind z ashackon"
+bind "z" "ashackon"
+
+
+alias +slowmotioninviz "+inviz; ak0speed 0.6"
+alias -slowmotioninviz "-inviz; ak0speed 1"
+
+
+alias slowmotions "bind mouse3 +inviz; bind p slowmotions
+alias slowmotions "bind mouse3 +slowmotioninviz; bind p slowmotions"
+bind p slowmotions
+
+
+alias +inviz "+ak0strafe_invisible; fpson"
+alias -inviz "fpsoff; -ak0strafe_invisible"
+bind mouse3 "+inviz"
+bind SHIFT "+ak0gstrafe"
+
+ak0speed 1
+ak0bhop 0
+ak0yawspeed 800
+ak0sidespeed 400
+ak0forwardspeed 400
+ak0fps 750
+ak0draw_hud 1
+ak0fps_modem 0
+ak0developer 1
+ak0drawweapon 1
+ak0strafe_add 0
+ak0ground_distance 4.4
